@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/stylesheets/contactos.css">
+<main>
+    <div class="contactanos">
+        <h2>Contactanos</h2>
+        <div class="line"></div>
+        <form action="/contactos" method="post" class="formulario">
+            <p>
+                <label for="Nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre">
+            </p>
+            <p>
+                <label for="Email">Email</label>
+            <input type="email" name="email" placeholder="Email">
+            </p>
+            <p>
+                <label for="Sede">Sede</label>
+                <select name="sede" id="" >
+                    <option disabled selected>País </option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                </select>
+            </p>
+            <p>
+                <label for="telefono">Telefono</label>
+            <input type="tel" name="telefono"  placeholder="Inserte un Teléfono ">
+            </p>
+            <p>
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" placeholder="Inserte un mensaje " ></textarea>
+           
+            </p>
+        <p>
+            <input type="submit" value="Enviar"></p>
+                   
+        </form>
+ <p class="mensaje"> {{message}}</p>
+    </div>
+
+   
+    <div class="photo">
+        <img src="../images/contactanos.jpeg" alt="">
+    </div>
+   </main>
