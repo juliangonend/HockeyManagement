@@ -73,7 +73,6 @@ header{
     gap: 4%;
     width: 40%;
     margin-left: 45px;
-    /* margin-top:30px; */
 
 }
 .header-content h1{
@@ -97,7 +96,7 @@ header .photos{
 }
 header .photos img{
     padding: 10px 5px;
-    max-width: 300px;
+    width: 300px;
     height: auto;
 }
 img{
