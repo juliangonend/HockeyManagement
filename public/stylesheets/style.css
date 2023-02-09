@@ -4,7 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  
+ 
  
 }
 .margin{
@@ -20,6 +20,8 @@ ul{
   list-style: none;
 }
 body{
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: aliceblue;
 }
 .line{
@@ -52,6 +54,7 @@ nav{
   width: 100%;
    position: fixed; 
   display:flex;
+  align-items: center;
   justify-content: space-between;
   background-color: aliceblue;
   max-height: 8vh;
@@ -61,28 +64,19 @@ nav{
 nav h2{
 
   margin:auto 0 ;
-  padding-left: 5px;
-  width: 20%;
+  padding-left: 1%;
+  width: 50%;
   color:#0b2b70;
   
-}
-.nav-menu{
-  width: 45%;
-  height: 60px;
 }
 .mobile-button{
   display: none;
 }
+
 .nav-mobile{
   display: none;
 }
-.nav-menu ul{
-  display: flex;
-  list-style: none;
- justify-content: space-around;
- padding: 20px;
 
-}
 .nav-menu  a{
   text-decoration: none;
   font-size: 15px;
@@ -92,17 +86,20 @@ nav h2{
 }
 .nav-menu  a:hover{
 
- 
   font-size: 18px;
   border-bottom: 1px solid rgb(0, 0, 0);
   transform: 1.1;
 }
 
 .activo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #061946;
- 
-  width: 100px;
+  width: auto;
   height: 22px;
+  padding: 4px 15px;
+  font-size: 16px;
   text-align: center;
   border-radius:10px ;
 
@@ -115,13 +112,15 @@ nav h2{
   width: 45%;
   height: 60px;
 }
+
 .nav-menu ul{
   display: flex;
   list-style: none;
  justify-content: space-around;
  padding: 20px;
-
+ height: 100%;
 }
+
 .nav-menu .desactivado a{
   text-decoration: none;
   font-size: 15px;
@@ -175,12 +174,8 @@ footer p{
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 700px) { 
-  .nav-menu{
-      width: 100%;
-      position: none;
-      display: none;
-  }
+@media (max-width: 750px) { 
+ 
   *{
       padding: 0;
       margin: 0;
@@ -219,47 +214,41 @@ footer p{
   }
   
   /* nav */
-  .activo{
-      background-color: #061946;
-     
-      width: 80px;
-      height: 22px;
-      text-align: center;
-      border-radius:10px ;
   
-  }
-  .activo a{
-      color: white;
-  }
+  
   nav{
-      position: fixed;
+      position: sticky;
       display:flex;
       justify-content: space-between;
       background-color: aliceblue;
-      max-height: 8vh;
+      height: 8vh;
+      padding: 0 3%;
   }
   nav h2{
-      margin:auto 0 ;
-      padding-left
-      : 5px;
-      width: 20%;
+    
+      width:auto;
       color:#0b2b70;
+      font-size: 1.2rem;
       
   }
   .nav-menu{
       display: none;
   }
   .nav-mobile{
-      display: inline;
-      position:sticky;
-      left: -100%;
+      display: none;
       width: 100%;
       height: 100%;
-      background-color:#061946ce;
+      background-color:#355ebfde;
       position: absolute;
+      z-index: 2;
+  
+  }
+  .visible::before{
+    transition: 1s;
   }
   .visible{
-      left: 0;
+    transition: 3s;
+      display: block;
   }
   .nav-mobile ul{
       padding: 30% 0;
@@ -278,50 +267,84 @@ footer p{
   }
   
   .nav-mobile li a{
-   border-bottom: 3px solid white;
+    color: aliceblue;
    width: 100%;
 
   }
+  .activo{
+    background-color: #061946;
+    padding: 2% 5%;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    border-radius:10px ;
 
+}
+.activo a{
+    color: white;
+}
   .nav-mobile  .desactivado a{
   color:white
   }
   .mobile-button{
-      padding:2%;
+      padding:0;
+      margin-right: 3%;
+      width: 10%;
       display: block;
       color: black;
       text-decoration: none;
+      background-color: transparent;
+      border: none;
+  }
+  .mobile-button img{
+    width: 100%;
+
   }
 
   /* footer */
   footer{
-      display: none;
       background-color: #061946;
       width: 100%;
-  
+    display: none;
   }
   .footer-list{
-      display: flex;
-      max-width: 960px;
+    height: 50vh;
       margin: 0 auto;
-      justify-content: space-evenly;
-      color: white;
-  
+     display: grid;
+     grid-template-rows: 4fr 4fr 2fr 2fr ;
   }
   .footer-card{
-      padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    grid-row: 1;
+      padding:  0;
+      height: 100%;
+  }
+  #uno{
+    grid-row: 1/2;
+  }
+  #dos{
+    grid-row: 2/3;
+  }
+  #tres{
+    grid-row: 3/4;
+  }
+  #cuatro{
+    grid-row: 4/5;
   }
   .footer-card h3{
+    display: none;
       text-align: center;
       color: #484848;
-  }
+    font-size: 1rem;
+    }
   .footer-card li{
       padding: 15px 0;
       text-align: center;
   }
   .footer-card a{ 
   color: #484848;
-  font-size: 15px;
+  font-size: 1rem;
   }
   .footer-card a:hover , .footer-card h3:hover{
       border-bottom: 1px solid white;
@@ -329,8 +352,8 @@ footer p{
   
   }
   footer p{
+    height: 5%;
+    width: 100%;
       text-align: center;
-      margin-left: auto;
-      margin-right: auto;
   }
 }

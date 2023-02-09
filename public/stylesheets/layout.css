@@ -64,6 +64,7 @@
     
   }
 
+
   /*main¨*/
   
   /* .nav-menu{
@@ -73,9 +74,7 @@
   .mobile-button{
     display: none;
   }
-  .nav-mobile{
-    display: none;
-  }
+
   .nav-menu ul{
     display: flex;
     list-style: none;
@@ -154,6 +153,14 @@
         width: 100%;
         position: none;
         display: none;
+    }
+    .mobile{
+      display: block;
+      font-size: 30px;
+      height: 100%;
+    }
+    .buton{
+      display: block;
     }
     *{
         padding: 0;

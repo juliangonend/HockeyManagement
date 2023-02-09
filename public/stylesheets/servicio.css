@@ -38,19 +38,7 @@ body{
 }
 
 /* nav */
-.activo{
-    background-color: #0b2b70;
-   font-size: 16px;
-   padding: 2px 6px;
-    width: auto;
-    height: 22px;
-    text-align: center;
-    border-radius:10px ;
 
-}
-.activo a{
-    color: white;
-}
 /* header */
 .header-content .ctn{
     margin: 50px 0;
@@ -62,7 +50,7 @@ header{
     padding:60px 0 ;
     background-color: #22418A;
    width: 100%;
-   height: 95vh;
+   height: 98vh;
    display: flex;
   justify-content: space-between;
    
@@ -141,6 +129,9 @@ main{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 } 
+.content .ctn{
+    display: none;
+}
 .content h4{
     font-size: 25px;
     color: antiquewhite;
@@ -164,4 +155,178 @@ main{
 .tipos-card:nth-child(even){
     flex-direction: row-reverse;
     background-color: #22418A;
+}
+@media (max-width: 700px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        /* overflow-x: hidden; */
+    }
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    body{
+        background-color: aliceblue;
+    }
+    .line{
+        background-color: #0b2b70;
+        width: 25rem;
+        height: 4px;
+        border-radius: 20px;
+    }
+    .ctn{
+    
+        max-width: 200px;
+        padding: 20px;
+        border-radius: 20px;
+        left: auto;
+        font-size: 20px;
+        text-align: left;
+        transition: .5s;
+        
+    }
+    .ctn:hover{
+        transform: 1.2;
+        font-size: 22px;
+    
+    }
+    
+    /* nav */
+   
+    /* header */
+    .header-content .ctn{
+        margin: 50px 0;
+        background-color: aliceblue;
+        color: #22418A;
+        font-weight: 600;
+    }
+    header{
+        padding:60px 0 ;
+        background-color: #22418A;
+       width: 100%;
+       height: 98vh;
+       display: flex;
+       flex-direction: column-reverse;
+      justify-content:center;
+       
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        gap: 4%;
+        width: 100%;
+        margin-left: 0px;
+        align-items: center;
+    
+    }
+    .header-content h1{
+        color: aliceblue;
+        font-size: 50px;
+        margin:20px 0;
+    
+    }
+    .header-content p{
+        text-align: center;
+        color: aliceblue;
+        font-size: 20px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    header .photos{
+        width: 100%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2%;
+        justify-content: center;
+    
+    }
+    header .photos img{
+        padding: 0.5% 0px;
+        max-width: 150px;
+        height: auto;
+    }
+    img{
+        transition: .5s;
+    }
+     img:hover{
+        transform: scale(1.15);
+     }
+    /* fin header */
+    /* main */
+    main{
+        padding: 20px 0;
+    }
+    .servicios-card{
+        width: 100%;
+        
+    }
+    .servicios-card h2{
+        font-size: 40px;
+        text-align: center;
+        color: #061946;
+        padding: 5px;
+        
+    }
+    .tipos-card{
+        height: 55vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 3%;
+        background-color: #061946;
+        margin: 5% 0 ;
+        padding:0px 1.2% 3%;
+    }
+    .tipos-card .content{
+        /* width: 50%; */
+        padding-left: 20px;
+        text-align: left;
+        text-align: center;
+    }
+    .content h3{
+        color: aliceblue;
+        font-size: 30px;
+        padding: 20px 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    } 
+    .content h4{
+        font-size: 25px;
+        color: antiquewhite;
+       display: none;
+    }
+    .content p{
+        margin-top: 10px;
+        font-size: 20px;
+        color: antiquewhite;
+        display:none
+    }
+    .content .ctn{
+      display: inline-block;
+        color:#0b2b70;
+        font-weight: bold;
+    }
+    .tipos-card .img{
+        width: 95%;
+        height: 50%;
+        margin: auto;
+        padding: 10px 0;
+        overflow: hidden;
+        border-radius: 7%;
+      
+    }
+    .img img{
+        border-radius: 4px;
+        max-width: 450px;
+    }
+    .tipos-card:nth-child(even){
+        flex-direction: column-reverse;
+        background-color: #22418A;
+    }
 }
